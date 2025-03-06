@@ -35,12 +35,12 @@ curl https://example.apiserver.com/trailinfo/{trail_one}
 ```  
 Response: returns trailinfo object after successfully accessing trail data.
 ```
-{
+[{
     "id": "trail_one",
     "name": "Example Trail Name",
-    "length": "123456789",
-    "elevation": "987654321"
-}
+    "length": 123456789,
+    "elevation": 987654321
+}]
 ```
 ## Getting info for all trails: **GET** /trailinfo
 
@@ -59,15 +59,15 @@ curl https://example.apiserver.com/trailinfo
 ```  
 Response: returns all trailinfo after successfully accessing data. Data is returned sorted by **id**.
 ```
-{
+[{
     "id": "trail_one",
     "name": "Example Trail Name",
-    "length": "123456789",
-    "elevation": "987654321"
-},
-{
+    "length": 123456789,
+    "elevation": 987654321
+}],
+[{
     // more trails, etc.
-}
+}]
 ```
 ## Creating a new trail: **POST** /trailinfo
 
@@ -88,12 +88,12 @@ curl https://example.apiserver.com/trailinfo/
 ``` 
 Response: returns trailinfo object after successfully creating a new trail. 
 ```
-{
+[{
     "id": "new_trail_id",
     "name": "Example New Trail Name",
-    "length": "1234",
-    "elevation": "null"
-}
+    "length": 1234,
+    "elevation": null
+}]
 ```
 ## Updating an existing trail: **PUT** /trailinfo/{id}
 
@@ -114,12 +114,12 @@ curl -X PUT https://example.apiserver.com/trailinfo/{new_trail_id}
 ```   
 Response: returns trailinfo object after successfully updating a  trail. 
 ```
-{
+[{
     "id": "new_trail_id",
     "name": "Example New Trail Name",
-    "length": "1234",
-    "elevation": "4321"
-}
+    "length": 1234,
+    "elevation": 4321
+}]
 ```
 ## Deleting an existing trail: **DELETE** /trailinfo/{id}
 
@@ -136,8 +136,8 @@ curl -X DELETE https://example.apiserver.com/trailinfo/{new_trail_id}
 ```   
 Response: returns an object with a deleted parameter set to true. 
 ```
-{
+[{
     "id": "new_trail_id",
     "deleted": true
-}
+}]
 ```
