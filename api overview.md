@@ -2,6 +2,10 @@
 
 <!-- This is a sample for AppRoach's API. This sample focuses on the Trail Topography feature of the app.-->
 
+## About AppRoach API
+
+The AppRoach API is a REST API returning a JSON content type.
+
 ## Trail Topography API
 
 These are the objects for the Trail Topography API.
